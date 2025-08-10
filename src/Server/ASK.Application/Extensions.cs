@@ -1,16 +1,17 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ASK.Application;
 
 public static class Extensions
 {
-    public static IServiceCollection AddApplication(this IServiceCollection services)
+  public static IServiceCollection AddApplication(this IServiceCollection services)
+  {
+    services.AddMediator(options =>
     {
-        services.AddMediator(options =>
-        {
-            options.ServiceLifetime = ServiceLifetime.Scoped;
-        });
+      options.ServiceLifetime = ServiceLifetime.Scoped;
+      options.Namespace = "ASK";
+    });
 
-        return services;
-    }
+    return services;
+  }
 }

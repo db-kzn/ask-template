@@ -12,7 +12,6 @@
     <PackageVersion Include="SonarAnalyzer.CSharp" Version="10.15.0.120848" />
   </ItemGroup>
   <ItemGroup Label="Aspire">
-    <PackageVersion Include="Aspire" Version="9.4.0" />
     <PackageVersion Include="Aspire.AppHost.Sdk" Version="9.4.0" />
     <PackageVersion Include="Aspire.Hosting.AppHost" Version="9.4.0" />
     <PackageVersion Include="Aspire.Hosting.PostgreSQL" Version="9.4.0" />
@@ -34,8 +33,8 @@
     <PackageVersion Include="FluentValidation" Version="12.0.0" />
     <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
     <PackageVersion Include="AutoMapper" Version="15.0.1" />
-    <PackageVersion Include="MailKit" Version="4.13.0" />
     <PackageVersion Include="Extensions.MudBlazor.StaticInput" Version="3.2.1" />
+    <PackageVersion Include="MailKit" Version="4.13.0" />
     <PackageVersion Include="MudBlazor" Version="8.11.0" />
     <PackageVersion Include="Mediator.Abstractions" Version="3.0.1" />
     <PackageVersion Include="Mediator.SourceGenerator" Version="3.0.1" />
@@ -56,7 +55,7 @@
     <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="9.7.0" />
     <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="9.4.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
-    <PackageVersion Include="Microsoft.OpenApi" Version="2.0.0" />
+    <PackageVersion Include="Microsoft.OpenApi" Version="1.6.24" />
   </ItemGroup>
   <ItemGroup Label="Serilog">
     <PackageVersion Include="Serilog" Version="4.3.0" />
