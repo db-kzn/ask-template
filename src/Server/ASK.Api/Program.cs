@@ -1,4 +1,5 @@
 using ASK.Application;
+using ASK.Application.Interfaces;
 using ASK.Domain.Entities;
 using ASK.Infrastructure.Data;
 using ASK.Infrastructure.Extensions;
@@ -13,6 +14,9 @@ builder.AddServiceDefaults();
 builder.Services.AddApplication();
 
 builder.Services.AddApplicationDbContext(builder.Configuration);
+
+// Регистрируем интерфейс → реализацию
+builder.Services.AddScoped<IApplicationDbContext>(sp => sp.GetRequiredService<AppDbContext>());
 
 // Добавь Identity
 builder.Services.AddIdentity<ApplicationUser, IdentityRole<string>>(options =>

@@ -1,3 +1,4 @@
+using ASK.Application.Interfaces;
 using ASK.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -5,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ASK.Infrastructure.Data;
 
-public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<string>, string>
+public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<string>, string>, IApplicationDbContext
 {
   private readonly string? _tenantId;
 
@@ -15,6 +16,8 @@ public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<stri
   }
 
   public DbSet<Tenant> Tenants => Set<Tenant>();
+
+  public DbSet<RefreshToken> RefreshTokens => throw new NotImplementedException();
 
   protected override void OnModelCreating(ModelBuilder builder)
   {
