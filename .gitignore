@@ -1,0 +1,43 @@
+# Build
+bin/
+obj/
+bld/
+Build/
+
+# IDE
+.vs/
+.vscode/
+*.swp
+*~
+.DS_Store
+
+# ASP.NET Core
+appsettings.Development.json
+secrets.json
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+node_modules/
+jspm_packages/
+npm-debug.log
+
+# Test
+TestResults/
+*.trx
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# NuGet
+*.nupkg
+packages/
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
