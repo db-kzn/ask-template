@@ -1,4 +1,4 @@
-﻿using ASK.Server.Infrastructure.Data;
+using ASK.Server.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,14 +11,27 @@ public static class ServiceCollectionExtensions
   {
     services.AddDbContext<AppDbContext>((sp, options) =>
     {
-      var connectionString = configuration.GetConnectionString("DefaultConnection")
-          ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+      var connectionString = configuration.GetConnectionString("DefaultConnection") ?? string.Empty;
+          //throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
-      options.UseNpgsql(connectionString, npgsqlOptions =>
+      if (string.IsNullOrEmpty(connectionString))
       {
-        npgsqlOptions.MigrationsAssembly("ASK.Server.Infrastructure");
-        npgsqlOptions.EnableRetryOnFailure();
-      });
+        // Для разработки можно использовать SQLite
+        connectionString = configuration.GetConnectionString("Sqlite") ?? "Data Source=ask.db";
+
+        options.UseSqlite(connectionString, sqliteOptions =>
+        {
+          sqliteOptions.MigrationsAssembly("ASK.Server.Migrations.SQLite");
+        });
+      }
+      else
+      {
+        options.UseNpgsql(connectionString, npgsqlOptions =>
+        {
+          npgsqlOptions.MigrationsAssembly("ASK.Server.Migrations.PostgreSQL");
+          npgsqlOptions.EnableRetryOnFailure();
+        });
+      }
     });
 
     return services;
