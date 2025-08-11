@@ -8,4 +8,8 @@
     <AssemblyName>ASK.Server.Migrations.SQLite</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

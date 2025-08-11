@@ -15,8 +15,8 @@ src/
 │   ├── ASK.Server.Domain/              # Core domain models
 │   ├── ASK.Server.Infrastructure/      # Shared infrastructure
 │   ├── Migrations/                     # DB Migrations
-│   │   ├── ASK.Migrations.PostgreSQL
-│   │   └── ASK.Migrations.SQLite
+│   │   ├── ASK.Server.Migrations.PostgreSQL
+│   │   └── ASK.Server.Migrations.SQLite
 │   └── Modules/                        # Optional feature modules (VSA)
 │       ├── ASK.Server.Modules.Catalog
 │       └── ASK.Server.Modules.ToDo

@@ -17,6 +17,8 @@
 		<ProjectReference Include="..\..\Aspire\ServiceDefaults\ServiceDefaults.csproj" />
 		<ProjectReference Include="..\..\Clients\BlazorWebApp.csproj" />
 		<ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+		<ProjectReference Include="..\Migrations\PostgreSQL\PostgreSQL.csproj" />
+		<ProjectReference Include="..\Migrations\SQLite\SQLite.csproj" />
 	</ItemGroup>
 
 </Project>
