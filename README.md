@@ -7,19 +7,23 @@ Base template for startups using .NET 9, Aspire, Blazor WebAssembly, Clean Archi
 ```
 src/
 ├── Aspire/
-│   ├── ASK.AppHost/           # Aspire orchestration
-│   └── ASK.ServiceDefaults/   # Shared service defaults
+│   ├── ASK.AppHost/                    # Aspire orchestration
+│   └── ASK.ServiceDefaults/            # Shared service defaults
 ├── Server/
-│   ├── ASK.Api/               # API + Blazor WASM host
-│   ├── ASK.Application/       # Shared application logic
-│   ├── ASK.Domain/            # Core domain models
-│   └── ASK.Infrastructure/    # Shared infrastructure
-├── Modules/                   # Optional feature modules (VSA)
-│   └── (e.g., Catalog, Todo)
+│   ├── ASK.Server.Api/                 # API + Blazor WASM host
+│   ├── ASK.Server.Application/         # Shared application logic
+│   ├── ASK.Server.Domain/              # Core domain models
+│   ├── ASK.Server.Infrastructure/      # Shared infrastructure
+│   ├── Migrations/                     # DB Migrations
+│   │   ├── ASK.Migrations.PostgreSQL
+│   │   └── ASK.Migrations.SQLite
+│   └── Modules/                        # Optional feature modules (VSA)
+│       ├── ASK.Server.Modules.Catalog
+│       └── ASK.Server.Modules.ToDo
 ├── Clients/
-│   └── ASK.BlazorWebApp/      # Blazor WebAssembly client
+│   └── ASK.Clients.BlazorWebApp/       # Blazor WebAssembly client
 └── Shared/
-    └── ASK.Shared/            # Shared DTOs, enums, constants
+    └── ASK.Shared/                     # Shared DTOs, enums, constants
 ```
 
 ## ✅ Features

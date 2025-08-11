@@ -1,4 +1,4 @@
-using ASK.BlazorWebApp;
+using ASK.Clients.BlazorWebApp;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
