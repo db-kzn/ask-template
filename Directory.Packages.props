@@ -11,9 +11,12 @@
   <ItemGroup Label="Analyzer">
     <PackageVersion Include="Microsoft.AspNet.Identity.EntityFramework" Version="2.2.4" />
     <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.8" />
+    <PackageVersion Include="Microsoft.Data.Sqlite.Core" Version="9.0.8" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.8" />
     <PackageVersion Include="Microsoft.Extensions.Identity.Stores" Version="9.0.8" />
     <PackageVersion Include="Microsoft.IdentityModel.Tokens" Version="8.13.1" />
     <PackageVersion Include="SonarAnalyzer.CSharp" Version="10.15.0.120848" />
+    <PackageVersion Include="SQLitePCLRaw.core" Version="3.0.1" />
     <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="8.13.1" />
   </ItemGroup>
   <ItemGroup Label="Aspire">

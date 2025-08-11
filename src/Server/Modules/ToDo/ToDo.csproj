@@ -4,8 +4,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>ASK.Server.Modules.ToDo</RootNamespace>
-    <AssemblyName>ASK.Server.Modules.ToDo</AssemblyName>
+    <RootNamespace>ASK.Server.Modules.Todo</RootNamespace>
+    <AssemblyName>ASK.Server.Modules.Todo</AssemblyName>
   </PropertyGroup>
 
 </Project>

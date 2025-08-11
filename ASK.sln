@@ -51,7 +51,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo", "src\Server\Modules\ToDo\ToDo.csproj", "{DB362DBB-F5AC-4D2D-801D-6231E92DD907}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo", "src\Server\Modules\Todo\Todo.csproj", "{DB362DBB-F5AC-4D2D-801D-6231E92DD907}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
